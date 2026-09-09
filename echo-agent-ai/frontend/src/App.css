@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #070913;
+    background-image: 
+      radial-gradient(circle at 15% 20%, rgba(112, 0, 255, 0.25) 0%, transparent 45%),
+      radial-gradient(circle at 85% 75%, rgba(59, 130, 246, 0.2) 0%, transparent 45%);
+    background-attachment: fixed;
+    color: #f3f4f6;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.glass-card {
+  background: rgba(15, 18, 37, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(139, 92, 246, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.neon-mic-glow {
+  box-shadow: 0 0 35px rgba(124, 58, 237, 0.6), 0 0 70px rgba(99, 102, 241, 0.3);
+}
+
+.neon-mic-recording {
+  box-shadow: 0 0 45px rgba(239, 68, 68, 0.8), 0 0 80px rgba(220, 38, 38, 0.5);
+}
+
+@keyframes wave {
+  0%, 100% { height: 10px; }
+  50% { height: 40px; }
+}
+
+.wave-bar-active {
+  animation: wave 1s ease-in-out infinite;
+}
